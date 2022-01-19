@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/Javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  
+  <!-- myservlet mapping -->
+  <servlet>
+  	<servlet-name>servlet</servlet-name>
+  	<servlet-class>com.servlet.MyServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>servlet</servlet-name>
+  	<url-pattern>/servlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- mygenericservlet mapping -->
+  <servlet>
+  	<servlet-name>genericservlet</servlet-name>
+  	<servlet-class>com.genericservlet.MyGenericServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>genericservlet</servlet-name>
+  	<url-pattern>/genericservlet</url-pattern>
+  	<url-pattern>/generic</url-pattern>
+  </servlet-mapping>
+  
+  <!-- httpServlet mapping -->
+  <servlet>
+  	<servlet-name>httpservlet</servlet-name>
+  	<servlet-class>com.httpservlet.MyHttpServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>httpservlet</servlet-name>
+  	<url-pattern>/http</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- servlet1 mapping -->
+  <servlet>
+  	<servlet-name>servlet1</servlet-name>
+  	<servlet-class>com.requestdispatcher.Servlet1</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>servlet1</servlet-name>
+  	<url-pattern>/servlet1</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet2 mapping -->
+  <servlet>
+  	<servlet-name>servlet2</servlet-name>
+  	<servlet-class>com.requestdispatcher.Servlet2</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>servlet2</servlet-name>
+  	<url-pattern>/servlet2</url-pattern>
+  </servlet-mapping>
+  
+  <!-- initParamTest servlet mapping -->
+  <servlet>
+  	<servlet-name>init</servlet-name>
+  	<servlet-class>com.initparam.InitParamTest</servlet-class>
+  	
+  	<!-- setting multiple init params -->
+  	<init-param>
+  		<param-name>name</param-name>
+  		<param-value>faisal</param-value>
+  	</init-param>
+  	
+  	<init-param>
+  		<param-name>city</param-name>
+  		<param-value>mumbai</param-value>
+  	</init-param>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>init</servlet-name>
+  	<url-pattern>/init</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- ContextParamTest servlet mapping -->
+  <servlet>
+  	<servlet-name>context</servlet-name>
+  	<servlet-class>com.contextparam.ContextParamTest</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>context</servlet-name>
+  	<url-pattern>/contextparam</url-pattern>
+  </servlet-mapping>
+  
+  <!-- setting multiple context params -->
+  <context-param>
+  	<param-name>name</param-name>
+  	<param-value>deadeye</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>city</param-name>
+  	<param-value>dubai</param-value>
+  </context-param>
+  
+  <!-- mapping for the filer -->
+  <filter>
+  	<filter-name>myfilter</filter-name>
+  	<filter-class>com.filter.MyFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>myfilter</filter-name>
+  	<url-pattern>/go</url-pattern>
+  </filter-mapping>
+  
+  <!-- mapping for the filer -->
+  <filter>
+  	<filter-name>filter</filter-name>
+  	<filter-class>com.authentication.Filterer</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>filter</filter-name>
+  	<url-pattern>/getter</url-pattern>
+  </filter-mapping>
+</web-app>
